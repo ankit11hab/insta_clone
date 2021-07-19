@@ -183,20 +183,46 @@ class FirstRoute extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.home, color:Colors.black),
             title: Text(''),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search, color:Colors.black),
+            icon: IconButton(
+              icon: const Icon(Icons.search),
+              color: Colors.black,
+              iconSize: 30,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ThirdRoute()),
+                );
+              },
+            ),
             title: Text(''),
             backgroundColor: Colors.blue,
           ),
+
           BottomNavigationBarItem(
             icon: Icon(Icons.camera_alt_outlined, color:Colors.black),
             title: Text(''),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.yellow,
           ),
+          //BottomNavigationBarItem(
+            //icon: Icon(Icons.favorite_border_outlined, color:Colors.black),
+            //title: Text(''),
+            //backgroundColor: Colors.blue,
+          //),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border_outlined, color:Colors.black),
+            icon: IconButton(
+              icon: const Icon(Icons.favorite_border_outlined),
+              color: Colors.black,
+              iconSize: 30,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ThirdRoute()),
+                );
+              },
+            ),
             title: Text(''),
             backgroundColor: Colors.blue,
           ),
@@ -428,6 +454,157 @@ class SecondRoute extends StatelessWidget {
             ),
           ),
       ])
+      )
+    );
+  }
+}
+
+
+class ThirdRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        title: Text("ankit_02",style: TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+        )),
+        leading: Icon(
+          Icons.add_box_outlined,
+          color: Colors.black,
+          size: 32,
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
+              size: 32,
+            ),
+
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
+        centerTitle: true,
+        backgroundColor: Colors.white,
+      ),
+      body: GridView.count(
+        primary: false,
+        //padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 5,
+        mainAxisSpacing: 5,
+        crossAxisCount: 2,
+        children: <Widget>[
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text("Image here"),
+            color: Colors.teal[100],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),
+          Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),Container(
+            padding: const EdgeInsets.all(8),
+            child: const Text('Image here'),
+            color: Colors.teal[100],
+          ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        ],
       )
     );
   }
