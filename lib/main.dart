@@ -216,21 +216,24 @@ class FirstRoute extends StatelessWidget {
               icon: const Icon(Icons.favorite_border_outlined),
               color: Colors.black,
               iconSize: 30,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ThirdRoute()),
-                );
-              },
+              onPressed: () {},
             ),
             title: Text(''),
             backgroundColor: Colors.blue,
           ),
           
           BottomNavigationBarItem(
-            icon: CircleAvatar(
+            icon: IconButton(
+              icon: CircleAvatar(
               radius: 20,
-              backgroundImage: AssetImage('assets/person4.jpg')
+              backgroundImage: AssetImage('assets/person4.jpg'),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FourthRoute()),
+                );
+              },
             ),
             title: Text(''),
             backgroundColor: Colors.blue,
@@ -590,22 +593,85 @@ class ThirdRoute extends StatelessWidget {
             child: const Text('Image here'),
             color: Colors.teal[100],
           ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         ],
       )
+    );
+  }
+}
+
+
+class FourthRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        title: Text("ankit_02",style: TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+        )),
+        leading: Icon(
+          Icons.add_box_outlined,
+          color: Colors.black,
+          size: 32,
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios_new,
+              color: Colors.black,
+              size: 32,
+            ),
+
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
+        centerTitle: true,
+        backgroundColor: Colors.white,
+      ),
+      body: GridView.count(
+          primary: false,
+          //padding: const EdgeInsets.all(20),
+          crossAxisSpacing: 5,
+          mainAxisSpacing: 5,
+          crossAxisCount: 4,
+          children: <Widget>[
+            Container(
+            padding: const EdgeInsets.all(8),
+            child: CircleAvatar(
+                radius: 26,
+                backgroundImage: AssetImage('assets/person1.jpg')
+            ),
+            ),
+    Container(
+    padding: const EdgeInsets.all(8),
+    child: Center(
+        child: Text("10\nPosts",textAlign: TextAlign.center ,style:TextStyle(fontWeight: FontWeight.bold, fontSize: 17))
+    ),
+    ),
+    Container(
+    padding: const EdgeInsets.all(8),
+      child: Center(
+          child: Text("256\nFollowers",textAlign: TextAlign.center , style:TextStyle(fontWeight: FontWeight.bold, fontSize: 17))
+      ),
+    ),
+    Container(
+    padding: const EdgeInsets.all(8),
+      child: Center(
+          child: Text("186\nFollowing",textAlign: TextAlign.center , style:TextStyle(fontWeight: FontWeight.bold, fontSize: 17))
+      ),
+    )]),
+    );
+  }
+}
+
+class FifthRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+
     );
   }
 }
